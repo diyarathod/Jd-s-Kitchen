@@ -132,7 +132,7 @@ width:500px;
       </tr>
    
     <?php
-    $que=mysqli_query($a,"SELECT * FROM `ktry`  where is_admin='False' order by id ");
+    $que=mysqli_query($a,"SELECT * FROM `ktry1`  where is_admin='False' order by id ");
 	
 	 while($row=mysqli_fetch_array($que))
 	 {

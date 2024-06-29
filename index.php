@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>JD's Kitchen</title>
+  <title>Cozy Corner</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/jd1.png" rel="icon">
-  <link href="assets/img/jd1.png" rel="apple-touch-icon">
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -41,7 +41,7 @@ border: 1px solid white;
 position: absolute;
 width: 80vw;
 transform: translate(-50%, -50%);
-top: 210%;
+top: 205%;
 left: 50%;
 display: flex;
 justify-content: space-around;
@@ -77,15 +77,14 @@ font-weight: 400;
 line-height: 0;
 
 }
-@media screen and(max-width :  1024px)
-{
-.wrapper{width:85vw;}
-.container2{
-height:26vmin;
-width:26vmin;
-font-size:12px;
 
+
+
+#hero {
+  background:url("assets/img/header.jpeg") top center;
 }
+#about {
+  background: url("assets/img/img1.jpeg") center center;
 }
     </style>
 </head>
@@ -96,8 +95,8 @@ font-size:12px;
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-    <a href="index.php" class="logo me-auto me-lg-0"><img src="assets/img/jd1.png" alt="" class="img-fluid"></a>
-      <h1 class="logo me-auto me-lg-0"><a href="index.php">Jd's Kitchen</a></h1>
+    <a href="index.php" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      <h1 class="logo me-auto me-lg-0"><a href="index.php">Cozy Corner</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
        
 <?php
@@ -109,7 +108,7 @@ include ("connect.php");
           <li><a class="nav-link scrollto" href="signup.php">
             Sign Up</a></li>
           <li><a class="nav-link scrollto" href="Login.php">Login</a></li>
-          <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
+          <li><a class="nav-link scrollto" href="#menu">Products</a></li>
           
           
           <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
@@ -131,11 +130,11 @@ include ("connect.php");
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
       <div class="row">
         <div class="col-lg-8">
-          <h1>Welcome to <span>JD's Kitchen</span></h1>
-          <h2>HOMEMADE FOOD!</h2>
+          <h1>Welcome to <span>COZY CORNER</span></h1>
+          
 
           <div class="btns">
-            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+            <a href="#specials" class="btn-menu animated fadeInUp scrollto">Our Products</a>
           </div>
         </div>
         <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
@@ -154,24 +153,18 @@ include ("connect.php");
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
             <div class="about-img">
-              <img src="assets/img/dish4.jpg" alt="">
+              <img src="assets/img/header2.jpeg" alt="">
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Fresh Homemade Food for PG students, Employees who can't cook food at home.</h3>
+            <h3>Easy Renting!</h3>
+            <br>
+
             <p class="fst-italic">
-              Well,many of you might like restaurant food,but would you like 
-              to make a habit of eating homemade food? 
+            Your go-to destination for stylish and affordable furniture rentals. Whether you're furnishing a new home, office, or staging a property, we offer a wide selection of high-quality pieces to fit your needs.
+             Enjoy the flexibility of renting with hassle-free delivery, setup, and pickup, all while saving money and contributing to a sustainable lifestyle. Explore our collections today and transform your space effortlessly.
             </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Eat Healthy,Stay Healthy.</li>
-              <li><i class="bi bi-check-circle"></i> Eat Better Food,Not Less.</li>
-              <li><i class="bi bi-check-circle"></i>The first Wealth is Health.</li>
-            </ul>
-            <p>
-              Who doesn't love 'Ma Ke Hath Ka Khana'!! We can't cook the food as your mother cooks but i am pretty sure you 
-              will really love to eat some 'Ghar Ka Khana'. We are here to serve you homemade food. Stay Safe, Stay Healthy.
-            </p>
+            
           </div>
         </div>
 
@@ -179,30 +172,7 @@ include ("connect.php");
     </section><!-- End About Section -->
     <!-- ======= counter Section ======= -->
 
-
-
-    <section>
-
-      <div class="wrapper">
-        <div class="container2">
-         
-         <span class="num" data-val="300">000+</span>
-         <span class="text">Tiffins Delivered</span>
-       </div>
-       <div class="container2">
-         
-        <span class="num" data-val="150">000+</span>
-        <span class="text">Regular Customer </span>
-      </div>
-      <div class="container2">
-         
-        <span class="num" data-val="20">000+</span>
-        <span class="text">Workers</span>
-      </div>
-   
-      </div>
-      </section>
-
+    
       <script>
   let valueDisplays= document.querySelectorAll(".num");
 let interval=5000;
@@ -223,41 +193,39 @@ clearInterval(counter);
 });
 </script>
 
-      
     <!-- End counter  Section -->
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <div class="section-title section2">
           <h2>Why Us</h2>
-          <p>Why Choose Our Tiffin-Services</p>
+          <p>Why Choose Our Products</p>
         </div>
 
         <div class="row">
-
           <div class="col-lg-4">
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
               <span>01</span>
-              <h4>Hygenic Food</h4>
-              <p>We provide you the Hygenic food which is homemade and healthy.</p>
+              <h4>Wide Selection</h4>
+              <p> Explore our extensive range of high-quality furniture to find the perfect pieces for your home or office.</p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in" data-aos-delay="200">
               <span>02</span>
-              <h4>Order from wherever you are Comfortable</h4>
-              <p>You can order the food from wherever you are!As we provide the facility to deliver the food to your office as well as home.</p>
+              <h4>Flexibility</h4>
+              <p>Whether you need furniture for a month or a year, our flexible rental options cater to your specific needs.</p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in" data-aos-delay="300">
               <span>03</span>
-              <h4>Cash on Delivery</h4>
-              <p>No worry about the payment doing online! You will have to pay cash on delivery. </p>
+              <h4>Sustainability</h4>
+              <p> Renting furniture promotes reuse and reduces waste, making it an eco-friendly choice for a greener planet. </p>
             </div>
           </div>
 
@@ -266,86 +234,30 @@ clearInterval(counter);
       </div>
     </section><!-- End Why Us Section -->
 
-    <!-- ======= Menu Section ======= -->
-    <section id="menu" class="menu section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Menu</h2>
-          <p>Check Our Tasty Menu</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="menu-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-starters">Silver</li>
-              <li data-filter=".filter-salads">Gold</li>
-              <li data-filter=".filter-specialty">Premium</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-6 menu-item filter-starters">
-            <img src="assets/img/silver.jpg" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">Silver</a><span>₹90</span>
-            </div>
-            <div class="menu-ingredients">
-              4 Roti,1 Sabji,Rice,Dal,Salad,Papad,Buttermilk
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-salads">
-            <img src="assets/img/gold.png" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">Gold</a><span>₹110</span>
-            </div>
-            <div class="menu-ingredients">
-              6 Roti,2 Sabji,Salad,Rice,Dal,2 Papad,Buttermilk
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-specialty">
-            <img src="assets/img/premium.png" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">Premium</a><span>₹150</span>
-            </div>
-            <div class="menu-ingredients">
-            8 Roti,2 Shak,Rice,Dal,Salad,Papad,Buttermilk
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Menu Section -->
-
+    
     <!-- ======= Specials Section ======= -->
     <section id="specials" class="specials">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Specials</h2>
-          <p>Weekend Specials</p>
+          <p>Products</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-3">
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Week 1</a>
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Table</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Week 2</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Chair</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Week 3</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Sofa</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Week 4</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Bed</a>
               </li>
             </ul>
           </div>
@@ -354,45 +266,45 @@ clearInterval(counter);
               <div class="tab-pane active show" id="tab-1">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Gulab Jamun</h3>
-                    <p>Our special Indian sweet which everyone loves is Gulab Jamun.Authentic Gulab Jamun is always made with khoya or mawa (evaporated milk solids). Khoya is made by continuously simmering the milk on a low heat until most of the moisture evaporates.</p>
+                    <h3>Table</h3>
+                    <p>Discover the perfect dining table as the centerpiece for family gatherings, crafted with durability and style in mind. A round table offers an intimate setting, ideal for cozy conversations. The tea table adds charm to your space, perfect for enjoying a quiet moment with a cup of tea. Finally, a versatile side table complements any room, providing functionality and flair.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/Gulab-jamun.jpg" alt="" class="img-fluid">
+                    <img src="assets/img/diningtable.jpeg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-2">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Suji Ka Halwa</h3>
-                    <p>Suji ka Halwa is an Indian traditional sweet dish. It is also known by various names like Suji Halwa in North India, Rava Kesari in South India, Rava Sheera in Western India, and Semolina Pudding in Europe & the USA.</p>
+                    <h3>Chair</h3>
+                    <p>The wingback chair combines classic elegance with comfortable support, making it a timeless addition to any room. A barstool adds style and height to your kitchen or bar area, perfect for casual seating. The armchair offers cozy comfort and a welcoming spot to relax, enhancing your living space with its inviting design.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/shiro.png" alt="" class="img-fluid">
+                    <img src="assets/img/barstool1.jfif" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-3">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Gajjar Ka Halwa</h3>
-                    <p>Gajjar ka Halwa is the best.Carrot halwa is a popular sweet made in North India, and it is especially popular during winters. The traditional gajar ka halwa recipe is made with only carrots, whole (full-fat) milk, ghee and sugar; there's no need for khoya (evaporated milk solids) or condensed milk.</p>
+                    <h3>Sofa</h3>
+                    <p>The mid-century sofa brings retro charm with its clean lines and timeless design, perfect for modern interiors. A modular sofa offers versatility, allowing you to customize your seating arrangement to fit any space. The tuxedo sofa adds sophistication with its sleek, tailored appearance and straight lines, ideal for a polished look.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
       
-                  <img src="assets/img/carrot-halwa.png" alt="" class="img-fluid">
+                  <img src="assets/img/mid_century3.jpeg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-4">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Kheer</h3>
-                    <p>The make of the Indian sweet dish (dessert) Kheer usually consists of cereals, lentils or their flours. Sometimes even fruits and veggies.</p>
+                    <h3>Bed</h3>
+                    <p>The single bed is perfect for compact spaces, offering comfort for one. A double bed provides ample room for a cozy sleep. The queen bed balances space and comfort, ideal for couples. The king bed offers luxurious space, perfect for ultimate relaxation. The bunk bed maximizes space, great for shared rooms or kids' bedrooms.</p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/kheer.png" alt="" class="img-fluid">
+                    <img src="assets/img/bed.jpeg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
@@ -404,70 +316,6 @@ clearInterval(counter);
 
       </div>
     </section><!-- End Specials Section -->
-
-    <!-- ======= Events Section ======= -->
-    <section id="events" class="events">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Events</h2>
-          <p>Order Tasty Food When You Organize Your Events </p>
-        </div>
-
-        <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="row event-item">
-                <div class="col-lg-6">
-                  <img src="assets/img/birthday.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0 content">
-                  <h3>Birthday Parties</h3>
-                  <div class="price">
-                    <p><span>As per dishes</span></p>
-                  </div>
-                  <p class="fst-italic">
-                   We also provide the facility to prepare dishes as per order for birthday Parties. 
-                  </p>
-                  <ul>
-                    <li><i class="bi bi-check-circled"></i>Provide you tasty as well as best quality food at your place.</li>
-                    <li><i class="bi bi-check-circled"></i>The childern's special as well as adult special loving food.</li>
-
-                  </ul>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="row event-item">
-                <div class="col-lg-6">
-                  <img src="assets/img/custom.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0 content">
-                  <h3>Custom Parties</h3>
-                  <div class="price">
-                    <p><span>As per dishes</span></p>
-                  </div>
-                  <p class="fst-italic">
-                    We provide the food delivery as per your custom parties.
-                  </p>
-                  <ul>
-                    <li><i class="bi bi-check-circled"></i>We will provide you different options as per your requirement.</li>
-                    <li><i class="bi bi-check-circled"></i> Custom parties are great but the food will also be fabulous .</li>
-                  </ul>
-                  
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Events Section -->
-
 
 
     <!-- ======= Testimonials Section ======= -->
@@ -486,7 +334,7 @@ clearInterval(counter);
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  The Food is just amazing and healthy as well.They provide good quality food and on time delivery.
+                  I purchased a mid-century sofa, and it's absolutely stunning! The quality is top-notch, and it fits perfectly in my living room. Highly recommend!
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/drashti1.jpg" class="testimonial-img" alt="">
@@ -499,7 +347,7 @@ clearInterval(counter);
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  I go to my office daily in morning 9 a.m,so i really don't have enough time to cook my lunch.This service is best.
+                  The bunk bed I bought for my kids is fantastic. It's sturdy, and they love the design. Great use of space in their room!
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/khyati1.jpg" class="testimonial-img" alt="">
@@ -512,7 +360,7 @@ clearInterval(counter);
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                I never felt like i am not eating homemade food. It's like "Maa ke hath ka khana".
+                  I ordered a round dining table, and I'm thrilled with it. It’s stylish and perfect for our family meals. Excellent craftsmanship!
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="assets/img/testimonials/manasvi.jpg" class="testimonial-img" alt="">
@@ -541,26 +389,26 @@ clearInterval(counter);
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-                <img src="assets/img/gallery1/image1.jpg" alt="" class="img-fluid">
+                <img src="assets/img/mid_century3.jpeg" alt="" class="img-fluid">
               
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-                <img src="assets/img/gallery1/image2 (1).jpg" alt="" class="img-fluid">
+                <img src="assets/img/img1.jpeg" alt="" class="img-fluid">
               
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-                <img src="assets/img/gallery1/image7 (1).jpg" alt="" class="img-fluid">
+                <img src="assets/img/img2.jpeg" alt="" class="img-fluid">
               
             </div>
           </div>
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-                <img src="assets/img/gallery1/image8.jpeg" alt="" class="img-fluid">
+                <img src="assets/img/bed.jpeg" alt="" class="img-fluid">
               
             </div>
           </div>
@@ -569,92 +417,6 @@ clearInterval(counter);
       </div>
     </section><!-- End Gallery Section -->
 
-    <!-- ======= Chefs Section ======= -->
-    <section id="chefs" class="chefs">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Chefs</h2>
-          <p>Our Proffesional Chefs</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <img src="assets/img/chefs/jinal.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Jinal Lathiya</h4>
-                  <span> Chef</span>
-                </div>
-              
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <img src="assets/img/chefs/diya.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Diya Rathod</h4>
-                  <span>Chef</span>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-
-          
-
-      </div>
-    </section><!-- End Chefs Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
-        </div>
-      </div>
-
-      <div data-aos="fade-up">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30688417.89504741!2d64.41490197220116!3d20.12800735684144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1672985432233!5m2!1sen!2sin" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="row mt-5">
-
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p> Block no.6,kalvibid,Bhavnagar,Gujarat,India</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>Jdkitchen23@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+91 9068756475</p>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
@@ -666,12 +428,12 @@ clearInterval(counter);
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>JD's Kitchen</h3>
+              <h3>Cozy Corner</h3>
               <p>
                  Block no.6,kalvibid,Bhavnagar, <br>
                  Gujarat,India<br><br>
                 <strong>Phone:</strong> +91 9068756475<br>
-                <strong>Email:</strong> Jdkitchen23@gmail.com<br>
+                <strong>Email:</strong> cozycorner@gmail.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>

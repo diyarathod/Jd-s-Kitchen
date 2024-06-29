@@ -169,45 +169,30 @@ session_start();
 $passErr=$emailErr="";
 if($_SERVER["REQUEST_METHOD"] == "POST") 
 {
-  $name =$_POST['Name'] ;
-  $usern= $_POST['us'];
-  $contact=$_POST['contact'];
-  $add =$_POST['ad'];
-  $add2=$_POST['add2'];
-  $Email= $_POST['Email']; 
+  $usern= $_POST['user_name'];
+  $contact=$_POST['contact_no'];
+  $add =$_POST['address'];
+  $Email= $_POST['email_id']; 
   $password = $_POST['password']; 
-  $cpass =$_POST['con'];
+  $cpass =$_POST['c_password'];
   
-    $sql = "Select * from ktry where Email='$Email'";
+  if ($password != $cpass) {
+    $passErr = "Passwords don't match!";
+} else {
+    $sql = "SELECT * FROM signup WHERE email_id='$Email'";
     $result = mysqli_query($a, $sql);
-    
-      // The button click event validation
-      if (isset($_POST['submit'])) 
-      {
-       if($password == $cpass)
-        {
-            if(!$Email)
-            {
-            
-            $sql = "INSERT INTO `ktry1` ( `Name`,`us`,`contact`,`ad`,`add2`,`Email`, 
-         `password`, `con`,`is_admin`) VALUES ('$name','$usern','$contact','$add','$add2','$Email', 
-         '$password', '$cpass','False')";
-         $result = mysqli_query($a, $sql);
-        
-         
-        echo("done");
-         header("location:Login.php");
-         
-            }
 
-        $emailErr="Email already exists";
-
+    if (mysqli_num_rows($result) > 0) {
+        $emailErr = "Email already exists!";
+    } else {
+        $sql = "INSERT INTO `signup` (`user_name`, `email_id`, `contact_no`, `address`, `password`, `c_password`, `is_admin`) 
+                VALUES ('$usern', '$Email', '$contact', '$add', '$password', '$cpass', 'False')";
+        if (mysqli_query($a, $sql)) {
+            header("location:Login.php");
+            exit();
         }
-        $passErr="Password doesn't match!";
-         
-    }  
-                
-     
+    }
+}  
 }   
 
 ?>
@@ -220,51 +205,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             <form action="signup1.php" method="post">
             <div class="sign-up-htm">
             <div class="group">
-            <label for="Name"  class="label"> Name 
+            <label for="username"  class="label">Username 
             <span class="error">* </span> </label>
            
-        <input type="text" class="input" id="n" name="Name"
+        <input type="text" class="input" id="n" name="user_name"
          placeholder=" Enter Your Full name" Required >    
     </div>
-
-    <div class="group">
-            <label for="us"  class="label"> Username  <span class = "error">* </span> </label>
-          
-        <input type="text" class="input" id="un" name="us"
-        placeholder="Ex: john123" Required >
-       
-    </div>
+    <div class="group"> 
+            <label for="Email" class="label" >Email <span class = "error">* </span> </label>
+           <?php
+           echo "$emailErr";
+           ?>
+        <input type="email" class="input" id="email_id"
+            name="email_id" aria-describedby="emailHelp" placeholder="Enter your Email" Required>  
+     </div>
+    
     
     <div class="group">
             <label  class="label"> Contact Number <span class = "error">* </span>  </label>
             
-        <input type="phone" class="input" id="contact" name="contact" 
+        <input type="phone" class="input" id="contact" name="contact_no" 
         placeholder="Enter your number" Required>
         
     </div>
 
     <div class="group">
-            <label for="Address" class="label" > Address 1  <span class = "error">* </span> </label>
+            <label for="Address" class="label" > Address  <span class = "error">* </span> </label>
           
-        <textarea class="input" id="add1" name="ad" Required > </textarea>
-    </div>
-<!----------------------------------------------------------------->
-    
-    <div class="group">
-            <label for="Add" class="label" > Address 2 
-        <textarea class="input" id="add2" name="add2" > </textarea> 
+        <textarea class="input" id="add1" name="address" Required > </textarea>
     </div>
 
-     <div class="group"> 
-            <label for="Email" class="label" >Email  <span class = "error">* </span> </label>
-           <?php
-           echo "$emailErr";
-           ?>
-        <input type="email" class="input" id="username"
-            name="Email" aria-describedby="emailHelp" placeholder="Enter your Email" Required>    
-
-     </div>
-    
     <div class="group"> 
             <label for="password" class="label">Password <span class = "error">* </span> </label>
             <?php
@@ -278,7 +248,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             <label for="con" class="label">Confirm Password <span class = "error">* </span></label>
            
             <input type="password" class="input"
-                id="cpassword" name="con" Required>
+                id="cpassword" name="c_password" placeholder="Re-enter password" Required>
             <small id="emailHelp" class="re" >
             Make sure to type the same password as above 
             </small> 

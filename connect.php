@@ -4,7 +4,7 @@
   $username = "root"; 
   $password = "";
  
-  $database = "kitchen";
+  $database = "furniture";
  
    // Create a connection 
    $a = mysqli_connect($servername, 

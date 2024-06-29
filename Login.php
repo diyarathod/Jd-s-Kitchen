@@ -168,11 +168,11 @@ session_start();
     if(isset($_REQUEST['submit']))
     {
        
-          $e=$_REQUEST['Email'];
+          $e=$_REQUEST['email_id'];
           $c=$_REQUEST['password'];
        
      
-            $my=mysqli_query($a,"SELECT * FROM `ktry1git push -u origin main` WHERE Email='$e' And password='$c' And is_admin= 'False' "); 
+            $my=mysqli_query($a,"SELECT * FROM `signup` WHERE email_id='$e' And password='$c' And is_admin= 'False' "); 
             $row=mysqli_fetch_array($my);            
             $r=mysqli_num_rows($my);
             
@@ -200,9 +200,7 @@ session_start();
           
         
     }  
-   
-        
-      
+     
     
  ?> 
   <div class="login-wrap">
@@ -221,7 +219,7 @@ session_start();
             <?php
             echo ($emailErr);
             ?>
-            <input type="text" class="input" id="us" name="Email"
+            <input type="text" class="input" id="us" name="email_id"
          placeholder=" Enter Your Email" Required> 
     </div>
 
